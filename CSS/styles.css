@@ -113,6 +113,11 @@ h1 {
     font-weight: 900;
 }
 
+#home-page-title {
+    margin: 2%;
+}
+
+
 a {
     /* ----------------------All pages*/
     /* Normal color of the links when no action on them has been done */
