@@ -1,0 +1,166 @@
+:root {
+    --primary-color: #f8f68b;
+    --secondary-color: #7d89fc;
+    --third-color: #000000;
+    --fourth-color: #e2e2e2;
+    --grid-projects-template-color: #aaaaaa;
+    --visited-anchor-color: #7217bd;
+    --hover-focus-anchor-color: #1b3dff;
+    --active-anchor-color: #f70909;
+    --font-family: 'Indie Flower', sans-serif;
+    --header-font-weight: 900;
+    --header-font-size: 140%;
+    --header-line-height: 1.5;
+    --body-font-weight: 400;
+    --body-font-size: 20px;
+    --body-line-height: 1.35;
+    --cursor-style: pointer;
+}
+
+header {
+    /* ----------------------All pages*/
+    background-color: var(--primary-color);
+    font-family: var(--font-family);
+    font-weight: var(--header-font-weight);
+    font-size: var(--header-font-size);
+    line-height: var(--header-line-height);
+    border-bottom-style: double;
+    border-bottom-width: 2px;
+    border-bottom-color: var(--third-color);
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page-header {
+    /* ----------------------All pages*/
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page-logo {
+    /* ----------------------All pages*/
+    font-size: 250%;
+    padding: 2%;
+    margin: 0px;
+    font-weight: 200;
+}
+
+#logo-second-part {
+    /* ----------------------All pages*/
+    font-weight: 900;
+    color: #fa4f24;
+}
+
+.page-header-image {
+    /* ----------------------All pages*/
+  max-width: 7%;
+}
+
+
+.page-header__item {
+    /* ----------------------All pages*/
+    flex: 0 1 200px;
+    padding: 2%;
+    font-weight: var(--header-font-weight);
+    font-size: var(--header-font-size);
+}
+
+.page-header__item:last-child {
+    /* ----------------------All pages*/
+    flex-grow: 1;
+    text-align: right;
+}
+
+nav.container a {
+    /* ----------------------All pages*/
+    font: var(--font-family);
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: var(--cursor-style);
+}
+
+.navigation-list {
+    /* ----------------------All pages*/
+    /*********************** Why this command? If I remove it, nothing changes? */
+    list-style-type: none;
+}
+
+.navigation-list li {
+    /* ----------------------All pages*/
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.navigation-list__item--active {
+    /* ----------------------All pages*/
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Indie Flower', sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+
+h1 {
+    font-size: 100px;
+    font-weight: 900;
+}
+
+#home-page-title {
+    margin: 2%;
+}
+
+
+a {
+    /* ----------------------All pages*/
+    /* Normal color of the links when no action on them has been done */
+    color: var(--third-color);
+}
+
+a:visited {
+    /* ----------------------All pages*/
+    /* color of the visited link */
+    color: var(--visited-anchor-color)
+}
+
+a:hover,
+a:focus {
+    /* ----------------------All pages*/
+    /* No underlining and links change to blue when hovering over */
+    color: var(--hover-focus-anchor-color);
+    text-decoration: none;
+}
+
+a:active {
+    /* ----------------------All pages*/
+    /* color of the selected link */
+    color: var(--active-anchor-color);
+}
+
+footer {
+    /* ----------------------Work page*/
+    background-color: var(--primary-color);
+    font-family: var(--font-family);
+    font-weight: var(--body-font-weight);
+    font-size: var(--body-font-size);
+    line-height: var(--body-line-height);
+    margin: 70px 0px 0px 0px;
+    border-top-style: double;
+    border-top-width: 2px;
+    border-top-color: var(--third-color)
+}
+
+.page-footer {
+    /* ----------------------All pages*/
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
