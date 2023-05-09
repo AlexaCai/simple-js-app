@@ -57,7 +57,7 @@ header {
 
 .page-header-image {
     /* ----------------------All pages*/
-  max-width: 7%;
+    max-width: 95px;
 }
 
 
@@ -114,7 +114,7 @@ h1 {
 }
 
 #home-page-title {
-    margin: 2%;
+    margin: 4%;
 }
 
 
@@ -143,6 +143,113 @@ a:active {
     /* color of the selected link */
     color: var(--active-anchor-color);
 }
+
+.pokemon-button-class {
+    /* Commands to style button added in Javascript on Home page to select pokemons */
+    background-color: var(--primary-color);
+    color: var(--third-color);
+    border: solid black;
+    text-align: center;
+    font-size: 30px;
+    padding: 2%;
+    margin: 0.3%;
+    list-style-type: none;
+    cursor: pointer;
+    width: 30%;
+
+}
+
+.pokemon-list {
+    list-style-type: none;
+    padding: 0px;
+}
+
+@media all and (min-width: 350px) and (max-width: 500px) {
+
+    /* ----------------------All pages*/
+    h1 {
+        font-size: 40px;
+    }
+
+    .pokemon-button-class {
+        width: 60%;
+        background-color: var(--primary-color);
+    }
+
+    .page-logo {
+        /* ----------------------All pages*/
+        padding: 2%;
+        margin: 0px;
+        font-weight: 200;
+        text-align: left;
+        margin: -110px 100px 0px 10px;
+        font-size: 26px;
+    }
+
+    .page-header-image {
+        /* ----------------------All pages*/
+        max-width: 95px;
+        margin-left: -230px;
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+
+    .page-header__item:last-child {
+        /* ----------------------All pages*/
+        flex-grow: 1;
+        text-align: right;
+        font-size: 26px;
+    }
+
+    .navigation-list {
+        /* ----------------------All pages*/
+        /*********************** Why this command? If I remove it, nothing changes? */
+        list-style-type: none;
+        display: inline-grid;
+        margin: 0px;
+    }
+
+}
+
+@media all and (min-width: 501px) and (max-width: 750px) {
+
+    /* ----------------------All pages*/
+    h1 {
+        font-size: 60px;
+    }
+
+    .pokemon-button-class {
+        width: 50%;
+        background-color: var(--primary-color);
+    }
+
+    .page-logo {
+        /* ----------------------All pages*/
+        padding: 2%;
+        margin: 0px;
+        font-weight: 200;
+        text-align: left;
+        margin: -100px 170px 10px 0px;
+        font-size: 38px;
+    }
+
+    .page-header-image {
+        /* ----------------------All pages*/
+        max-width: 95px;
+        margin-left: -320px;
+        margin-top: 40px;
+        margin-right: 90px;
+    }
+
+    .navigation-list {
+        /* ----------------------All pages*/
+        /*********************** Why this command? If I remove it, nothing changes? */
+        list-style-type: none;
+        display: inline-grid;
+        margin: 0px;
+    }
+}
+
 
 footer {
     /* ----------------------Work page*/
