@@ -46,6 +46,10 @@ let pokemonRepository = (function () {
         let listItem = document.createElement('li');
         //let button = document.createElement('button'); created a buttons elements (or buttons tags) for each Pokemon
         let button = document.createElement('button');
+        // button.addEventListener('click', function (event) created an event when a pokemon button is clicked on. This addEventListner code is associated to the function showDetails(pokemon) outisde the IIFE, and so return and take results from this outside function which shows each pokemon object inside the console.
+        button.addEventListener('click', function (event) {
+            showDetails(pokemon)
+        })
         //button.innerText = pokemon.name; inserted the name of a pokemon inside each of the buttons created
         //In this command, pokemon is equal to the (pokemon) parameter following the function in the code upper (function addListItem(pokemon) {)
         //In this command, .name is equal to the name object inside the IIFE upper (as in let pokemonList = [{ name: 'balbuzard', height: 7, types: ['grass', ' poison'] },
@@ -56,7 +60,7 @@ let pokemonRepository = (function () {
         listItem.appendChild(button);
         //pokemonList.append(listItem); attached each li (list items) to the ul (unordered list - the parent element)
         pokemonList.append(listItem);
-    }
+    };
 
     return {
         getAll: getAll,
@@ -83,5 +87,9 @@ let pokemonRepository = (function () {
 pokemonRepository.getAll().forEach(function (pokemon) {
     //***This function pokemonRepository.addListItem(pokemon); which refere/is same to the addListItem function inside the IIFE upper will run as long as there is a new Pokemon in the IIFE pokemonList array to go over on
     pokemonRepository.addListItem(pokemon);
-
 })
+
+//***Exercise 1.6 -  This function is there only to be called inside the addListItem function upper (inside the IIFE), and more specifically for the on click addEventListner. By calling this function here in the IIFE upper, the addEventListner is logging each pokemon object (all info) to the console everytime a pokemon button is clicked on.
+function showDetails(pokemon) {
+    console.log(pokemon);
+}
