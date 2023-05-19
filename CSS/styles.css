@@ -167,6 +167,62 @@ a:active {
     padding: 0px;
 }
 
+#modal-container {
+    display: none;
+}
+
+#modal-container.is-visible {
+    /* ----------------------Used to costum the BACKGROUND of the modals on any pages*/
+    position: fixed;
+    padding: 20px;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(223, 222, 222, 0.5);
+    /* z-index to show modal-container above any other content of the normal webpage*/
+    z-index: 999;
+    /* overflow to allow scrolling if the screen is not high enough*/
+    overflow: auto;
+    /* used to center the modal */
+    display: grid;
+    text-align: center;
+}
+
+.modal {
+    /* ----------------------Used to costum the actual modal windows on any pages*/
+    margin: auto;
+    display: inline-block;
+    box-sizing: border-box;
+    background: #87d7e7;
+    padding: 15px;
+    width: 100%;
+    max-width: 700px;
+    text-align: left;
+}
+
+.modal-close {
+    /* ----------------------Used to costum the close link (button) on the top right corner of modal windows on any pages*/
+    float: right;
+    -webkit-appearance: none;
+    border: 0;
+    background: none;
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.modal h1 {
+    /* ----------------------Used to costum the title inside modal windows on any pages*/
+    margin-top: 0;
+}
+
+.modal p {
+    /* ----------------------Used to costum the text inside modal windows on any pages*/
+    margin-bottom: 0;
+}
+
+
 @media all and (min-width: 350px) and (max-width: 500px) {
 
     h1 {
