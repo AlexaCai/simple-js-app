@@ -107,6 +107,40 @@ let pokemonRepository = (function () {
         });
     }
 
+    //Exercise 1.8 - Implementing modal
+    (function () {
+        function showModal(title, text) {
+            let modalContainer = document.querySelector('#modal-container');
+            modalContainer.classList.add('is-visible');
+            // Clear all existing modal content
+            modalContainer.innerHTML = ''
+            // Create the actual modal window
+            let modal = document.createElement('div');
+            modal.class.add('modal');
+            // Add the modal window element
+            let closeButtonElement = document.createElement('button');
+            closeButtonElement.classList.add('modal-close');
+            closeButtonElement.innerHTML = 'Close';
+            // Add title to the modal windown
+            let titleElement = document.createElement('h1');
+            titleElement.innerHTML = 'Title';
+            // Add text to the modal windown
+            let contentElement = document.createElement('p');
+            contentElement.innerHTML = 'Text';
+
+            modal.appendChild(closeButtonElement);
+            modal.appendChild(titleElement);
+            modal.appendChild(contentElement);
+            modalContainer.appendChild(modal);
+
+            modalContainer.classList.add('is-visible');
+        }
+
+        document.querySelector('#show-modal').addEventListener('click', () => {
+            showModal('Modal title', 'This is the modal content!');
+        });
+    })();
+
     return {
         getAll: getAll,
         add: add, //({ name: 'pikachu', height: 4, types: 'electric' }) the object on the left following the add:add is to manually add a Pokemon with caracteristics (ex here: Pikachu with his eight and type)
