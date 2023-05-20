@@ -108,7 +108,6 @@ let pokemonRepository = (function () {
     }
 
     //Exercise 1.8 - Implementing modal
-    (function () {
         function showModal(title, text) {
             let modalContainer = document.querySelector('#modal-container');
             modalContainer.classList.add('is-visible');
@@ -116,11 +115,13 @@ let pokemonRepository = (function () {
             modalContainer.innerHTML = ''
             // Create the actual modal window
             let modal = document.createElement('div');
-            modal.class.add('modal');
+            modal.classList.add('modal');
             // Add the modal window element
             let closeButtonElement = document.createElement('button');
             closeButtonElement.classList.add('modal-close');
             closeButtonElement.innerHTML = 'Close';
+            // closeButtonElement.addEventListener('click', hideModal); is the an listener for closeButtonElement, and call the hideModal function below when clicked (and thus allows the modal window the close when user click on the 'close' button at the top right corner of the modal window).
+            closeButtonElement.addEventListener('click', hideModal);
             // Add title to the modal windown
             let titleElement = document.createElement('h1');
             titleElement.innerHTML = 'Title';
@@ -134,12 +135,31 @@ let pokemonRepository = (function () {
             modalContainer.appendChild(modal);
 
             modalContainer.classList.add('is-visible');
+
+            modalContainer.addEventListener('click', (e) => {
+                // Make the modal window close when users click outside of it
+                let target = e.target;
+                if (target === modalContainer) {
+                    hideModal();
+                }
+            });
         }
 
         document.querySelector('#show-modal').addEventListener('click', () => {
             showModal('Modal title', 'This is the modal content!');
         });
-    })();
+        // function hideModal() { which is linked with closeButtonElement.addEventListener('click', hideModal) in the showModal function upper, allows users to close the modal windown if pressing on the 'close' button on the top right corner of the modal window
+        function hideModal() {
+            let modalContainer = document.querySelector('#modal-container');
+            modalContainer.classList.remove('is-visible');
+        }
+        // window.addEventListener('keydown', (e) => { allow user to close the modal windown if pressing escape on keyboard
+        window.addEventListener('keydown', (e) => {
+            let modalContainer = document.querySelector('#modal-container');
+            if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
+                hideModal();
+            }
+        });
 
     return {
         getAll: getAll,
