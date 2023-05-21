@@ -104,11 +104,13 @@ let pokemonRepository = (function () {
     function showDetails(pokemon) {
         loadDetails(pokemon).then(function () {
             console.log(pokemon);
+            // showModal (pokemon); used here to call and display the results from the showModal function below
+            showModal (pokemon);
         });
     }
 
     //Exercise 1.8 - Implementing modal
-        function showModal(title, text) {
+        function showModal(pokemon) {
             let modalContainer = document.querySelector('#modal-container');
             modalContainer.classList.add('is-visible');
             // Clear all existing modal content
@@ -124,14 +126,22 @@ let pokemonRepository = (function () {
             closeButtonElement.addEventListener('click', hideModal);
             // Add title to the modal windown
             let titleElement = document.createElement('h1');
-            titleElement.innerHTML = 'Title';
+            titleElement.innerHTML = pokemon.name;
             // Add text to the modal windown
             let contentElement = document.createElement('p');
-            contentElement.innerHTML = 'Text';
+            contentElement.innerHTML = `Height: ${pokemon.height}m<br>`;
+            // Show image of each pokemon in modal window when a pokemon is clicked on
+            let imageElement = document.createElement ('img')
+            // Add class to images to use it in CSS to style them
+            imageElement.classList.add('pokemon-image');
+            // Get the URL for each pokemon image and show the image from that URL for each pokemon
+            imageElement.src = pokemon.imageUrl
+            imageElement.setAttribute('alt', 'Pokemon picture');
 
             modal.appendChild(closeButtonElement);
             modal.appendChild(titleElement);
             modal.appendChild(contentElement);
+            modal.appendChild (imageElement);
             modalContainer.appendChild(modal);
 
             modalContainer.classList.add('is-visible');
@@ -163,7 +173,7 @@ let pokemonRepository = (function () {
 
     return {
         getAll: getAll,
-        add: add, //({ name: 'pikachu', height: 4, types: 'electric' }) the object on the left following the add:add is to manually add a Pokemon with caracteristics (ex here: Pikachu with his eight and type)
+        add: add, //({ name: 'pikachu', height: 4, types: 'electric' }) the object on the left following the add:add is to manually add a pokemon with caracteristics (ex here: Pikachu with his eight and type)
         addListItem: addListItem,
         loadList: loadList,
         loadDetails: loadDetails,
@@ -193,7 +203,7 @@ pokemonRepository.loadList().then(function () {
 //***Exercise 1.6 
 //This function pokemonRepository.getAll().forEach(function (pokemon) will run the loop over the function below (pokemonRepository.addListItem(pokemon);)
 pokemonRepository.getAll().forEach(function (pokemon) {
-    //***This function pokemonRepository.addListItem(pokemon); which refere/is same to the addListItem function inside the IIFE upper will run as long as there is a new Pokemon in the IIFE pokemonList array to go over on
+    //***This function pokemonRepository.addListItem(pokemon); which refere/is same to the addListItem function inside the IIFE upper will run as long as there is a new pokemon in the IIFE pokemonList array to go over on
     pokemonRepository.addListItem(pokemon);
 })
 
