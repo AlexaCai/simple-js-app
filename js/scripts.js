@@ -1,5 +1,5 @@
 
-//IIFE making pokemonList from Exercise 1.2 local to the function (rather than global if outside of the IIFE, as shown upper)
+//IIFE making pokemonList local to the function (rather than global if outside of the IIFE)
 let pokemonRepository = (function () {
 
     //Load the list of pokemons on my website from an external source via the API
@@ -76,14 +76,15 @@ let pokemonRepository = (function () {
             return response.json();
         }).then(function (details) {
             //***Below is adding the details to the item
-            item.imageUrl = details.sprites.front_default;
+            item.imageUrlFront = details.sprites.front_default;
+            item.imageUrlBack = details.sprites.back_default;
             item.height = details.height;
             item.weight = details.weight;
             item.types = details.types;
             item.abilities = details.abilities;
         }).catch(function (e) {
             console.error(e);
-        });
+        })
     }
 
     //Using showDetails() function to execute loadDetails() function in the IIFE upper. The showDetails() function is executed when a user clicks on a Pokémon. That’s the moment when Pokémon’s details are taken from the server acces to with the API. 
@@ -149,12 +150,12 @@ let pokemonRepository = (function () {
         modalBody.empty();
 
         let nameElement = $('<h1>' + pokemon.name + '</h1>');
-        let imageElementFront = $('<img class="modal-img" style="width:50%">');
+        let imageElementFront = $('<img class="modal-img" style="width:30%">');
         imageElementFront.attr('src', pokemon.imageUrlFront);
-        let imageElementBack = $('<img class="modal-img" style="width:50%">');
+        let imageElementBack = $('<img class="modal-img" style="width:30%">');
         imageElementBack.attr('src', pokemon.imageUrlBack);
-        let heightElement = $('<p>' + 'height : ' + pokemon.height + '</p>');
-        let weightElement = $('<p>' + 'weight : ' + pokemon.weight + '</p>');
+        let heightElement = $('<p>' + 'height : ' + pokemon.height + 'm' + '</p>');
+        let weightElement = $('<p>' + 'weight : ' + pokemon.weight + 'kg' + '</p>');
         let typesElement = $('<p>' + 'types : ' + pokemon.types + '</p>');
         let abilitiesElement = $('<p>' + 'abilities : ' + pokemon.abilities + '</p>');
 
