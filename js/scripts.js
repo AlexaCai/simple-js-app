@@ -32,7 +32,10 @@ let pokemonRepository = (function () {
         //let button = document.createElement('button'); created a buttons elements (or buttons tags) for each Pokemon
         let button = document.createElement('button');
         //button.classList.add('pokemon-button-class'); added a class the the buttons created upper to be able to style them in CSS within styles.css, and ('btn','btn-primary') classes are for Bootstrap.
-        button.classList.add('pokemon-button-class', 'btn', 'btn-primary');
+        button.classList.add('btn', 'btn-primary');
+        //Two lines below used to make sure the buttons created refer to the Boostrap model created (see function showModal(pokemon) below)
+        button.setAttribute('data-toggle', 'modal');
+        button.setAttribute('data-target', '#exampleModal');
         //button.innerText = pokemon.name; inserted the name of a pokemon inside each of the buttons created
         //In this command, pokemon is equal to the (pokemon) parameter following the function in the code upper (function addListItem(pokemon) {)
         //In this command, .name is equal to the name object inside the IIFE upper (as in let pokemonList = [{ name: 'balbuzard', height: 7, types: ['grass', ' poison'] },
@@ -45,6 +48,7 @@ let pokemonRepository = (function () {
         listItem.appendChild(button);
         //pokemonList.append(listItem); attached each li (list items) to the ul (unordered list - the parent element)
         pokemonList.append(listItem);
+        button.addEventListener('click', function() { pokemonRepository.showDetails(pokemon) });
     };
 
     //Function loadList used to get the complete list of Pokemon from here: https://pokeapi.co/api/v2/pokemon/?limit=150, precised in the 'let' apiURL at the beginning/top of this IIFE. 
@@ -74,7 +78,9 @@ let pokemonRepository = (function () {
             //***Below is adding the details to the item
             item.imageUrl = details.sprites.front_default;
             item.height = details.height;
+            item.weight = details.weight;
             item.types = details.types;
+            item.abilities = details.abilities;
         }).catch(function (e) {
             console.error(e);
         });
@@ -88,7 +94,7 @@ let pokemonRepository = (function () {
         });
     }
 
-    //Implementing modal manually
+    // //Implementing modal manually
     // function showModal(pokemon) {
     //     let modalContainer = document.querySelector('#modal-container');
     //     modalContainer.classList.add('is-visible');
@@ -136,19 +142,17 @@ let pokemonRepository = (function () {
 
     //Implemanting code with Bootstrap
     function showModal(pokemon) {
-        let modalContainer = document.querySelector('#modal-container');
         let modalBody = $('.modal-body');
         let modalTitle = $('.modal-title');
         let modalHeader = $('.modal-header');
         modalTitle.empty();
         modalBody.empty();
-        modalHeader.empty();
 
-        let nameElement = $('<h5>' + pokemon.name + '</h5>');
+        let nameElement = $('<h1>' + pokemon.name + '</h1>');
         let imageElementFront = $('<img class="modal-img" style="width:50%">');
-        imageElementFront.attritbute('src', pokemon.imageUrlFront);
+        imageElementFront.attr('src', pokemon.imageUrlFront);
         let imageElementBack = $('<img class="modal-img" style="width:50%">');
-        imageElementBack.attritbute('src', pokemon.imageUrlBack);
+        imageElementBack.attr('src', pokemon.imageUrlBack);
         let heightElement = $('<p>' + 'height : ' + pokemon.height + '</p>');
         let weightElement = $('<p>' + 'weight : ' + pokemon.weight + '</p>');
         let typesElement = $('<p>' + 'types : ' + pokemon.types + '</p>');
@@ -161,33 +165,24 @@ let pokemonRepository = (function () {
         modalBody.append(weightElement);
         modalBody.append(typesElement);
         modalBody.append(abilitiesElement);
-
-        modalContainer.classList.add('is-visible');
-
-        modalContainer.addEventListener('click', (e) => {
-            //Make the modal window close when users click outside of it
-            let target = e.target;
-            if (target === modalContainer) {
-                hideModal();
-            }
-        });
     }
 
-    document.querySelector('#show-modal').addEventListener('click', () => {
-        showModal('Modal title', 'This is the modal content!');
-    });
-    //function hideModal() { which is linked with closeButtonElement.addEventListener('click', hideModal) in the showModal function upper, allows users to close the modal windown if pressing on the 'close' button on the top right corner of the modal window
-    function hideModal() {
-        let modalContainer = document.querySelector('#modal-container');
-        modalContainer.classList.remove('is-visible');
-    }
-    //window.addEventListener('keydown', (e) => { allow user to close the modal windown if pressing escape on keyboard
-    window.addEventListener('keydown', (e) => {
-        let modalContainer = document.querySelector('#modal-container');
-        if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
-            hideModal();
-        }
-    });
+    //Old manual modal manually - make sure modal is closing according to different parameters
+    // document.querySelector('#show-modal').addEventListener('click', () => {
+    //     showModal('Modal title', 'This is the modal content!');
+    // });
+    // //function hideModal() { which is linked with closeButtonElement.addEventListener('click', hideModal) in the showModal function upper, allows users to close the modal windown if pressing on the 'close' button on the top right corner of the modal window
+    // function hideModal() {
+    //     let modalContainer = document.querySelector('#modal-container');
+    //     modalContainer.classList.remove('is-visible');
+    // }
+    // //window.addEventListener('keydown', (e) => { allow user to close the modal windown if pressing escape on keyboard
+    // window.addEventListener('keydown', (e) => {
+    //     let modalContainer = document.querySelector('#modal-container');
+    //     if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
+    //         hideModal();
+    //     }
+    // });
 
     return {
         getAll: getAll,

@@ -75,32 +75,6 @@ header {
     text-align: right;
 }
 
-nav.container a {
-    /* ----------------------All pages*/
-    font: var(--font-family);
-    margin: 0px 10px;
-    padding: 10px 10px;
-    position: relative;
-    z-index: 0;
-    cursor: var(--cursor-style);
-}
-
-.navigation-list {
-    /* ----------------------All pages*/
-    list-style-type: none;
-}
-
-.navigation-list li {
-    /* ----------------------All pages*/
-    display: inline-block;
-    margin-left: 15px;
-}
-
-.navigation-list__item--active {
-    /* ----------------------All pages*/
-    text-decoration: none;
-}
-
 body {
     /* ----------------------All pages*/
     font-family: 'Indie Flower', sans-serif;
@@ -117,13 +91,6 @@ h1 {
 #home-page-title {
     /* -----------------------Home page*/
     margin: 4%;
-}
-
-
-a {
-    /* ----------------------All pages*/
-    /* Normal color of the links when no action on them has been done */
-    color: var(--third-color);
 }
 
 a:visited {
@@ -144,93 +111,6 @@ a:active {
     /* ----------------------All pages*/
     /* color of the selected link */
     color: var(--active-anchor-color);
-}
-
-.pokemon-button-class {
-    /* Commands to style button created in Javascript on Home page to select pokemons */
-    background-color: var(--primary-color);
-    color: var(--third-color);
-    border: solid black;
-    text-align: center;
-    font-size: 30px;
-    padding: 2%;
-    margin: 0.3%;
-    list-style-type: none;
-    cursor: pointer;
-    width: 30%;
-
-}
-
-.pokemon-list {
-    /* ----------------------Home page*/
-    list-style-type: none;
-    padding: 0px;
-}
-
-#modal-container {
-    display: none;
-}
-
-#modal-container.is-visible {
-    /* ----------------------Used to costum the BACKGROUND of the modals on any pages*/
-    position: fixed;
-    padding: 20px;
-    box-sizing: border-box;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(223, 222, 222, 0.5);
-    /* z-index to show modal-container above any other content of the normal webpage*/
-    z-index: 999;
-    /* overflow to allow scrolling if the screen is not high enough*/
-    overflow: auto;
-    /* used to center the modal */
-    display: grid;
-    text-align: center;
-}
-
-.modal {
-    /* ----------------------Used to costum the actual modal windows on any pages*/
-    margin: auto;
-    display: inline-block;
-    box-sizing: border-box;
-    background: #ec5959;
-    padding: 25px;
-    width: 100%;
-    max-width: 700px;
-    text-align: left;
-}
-
-.modal-close {
-    /* ----------------------Used to costum the close link (button) on the top right corner of modal windows on any pages*/
-    float: right;
-    -webkit-appearance: none;
-    border: 0;
-    background: none;
-    color: #ffffff;
-    text-decoration: underline;
-    font-size: 150%;
-    margin-top: 10px;
-}
-
-.modal h1 {
-    /* ----------------------Used to costum the title inside modal windows on any pages*/
-    margin-top: 0;
-}
-
-.modal p {
-    /* ----------------------Used to costum the text inside modal windows on any pages*/
-    font-size: 150%;
-    text-align: center;
-}
-
-.modal img {
-    /* ----------------------Used to costum the text inside modal windows on any pages*/
-    display: block;
-    width: 125px;
-    height: auto;
-    margin: auto;
 }
 
 @media all and (min-width: 350px) and (max-width: 500px) {
@@ -327,7 +207,6 @@ footer {
     font-weight: var(--body-font-weight);
     font-size: var(--body-font-size);
     line-height: var(--body-line-height);
-    margin: 70px 0px 0px 0px;
     border-top-style: double;
     border-top-width: 2px;
     border-top-color: var(--third-color)
@@ -339,4 +218,9 @@ footer {
     display: flex;
     flex-direction: column;
     text-align: center;
+}
+
+#footer-title {
+    /* ----------------------All pages*/
+margin-top: 20px;
 }
