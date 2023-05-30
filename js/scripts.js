@@ -32,7 +32,7 @@ let pokemonRepository = (function () {
         //let button = document.createElement('button'); created a buttons elements (or buttons tags) for each Pokemon
         let button = document.createElement('button');
         //button.classList.add('pokemon-button-class'); added a class the the buttons created upper to be able to style them in CSS within styles.css, and ('btn','btn-primary') classes are for Bootstrap.
-        button.classList.add('btn', 'btn-danger', 'btn-lg');
+        button.classList.add('btn', 'btn-danger', 'btn-block');
         //Two lines below used to make sure the buttons created refer to the Boostrap model created (see function showModal(pokemon) below)
         button.setAttribute('data-toggle', 'modal');
         button.setAttribute('data-target', '#exampleModal');
