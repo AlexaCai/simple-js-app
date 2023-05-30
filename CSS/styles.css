@@ -85,7 +85,20 @@ h1 {
     margin: 4%;
 }
 
-.btn-lg {
+.pokemon-list {
+    /* -----------------------Home page - Used to overwrite the previous columns display from Bootstrap (to go back to the single column Bootstrap feature, simply delete this command). This command display the Pokemon names buttons in 3 columns on the home page */
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    border-style: none;
+}
+
+.list-group-item {
+    /* -----------------------Home page - Used to overwrite the previous home page button borders display from Bootstrap (to go back to the single column Bootstrap feature, simply delete this command). This command display the Pokemon names buttons without any border around on the home page */
+    border: none;
+}
+
+.btn-block {
     /* -----------------------Home page - Used to overwrite the previous red color from Bootstsap (for the home page buttons appearing for each Pokemon) */
     background-color: #fa2424;
 }
@@ -135,6 +148,14 @@ h1 {
         /* ----------------------All pages*/
         display: none;
     }
+
+    .pokemon-list {
+        /* -----------------------Home page - Used to overwrite the previous columns display from Bootstrap (to go back to the single column Bootstrap feature, simply delete this command). This command display the Pokemon names buttons in 3 columns on the home page */
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: auto;
+        border-style: none;
+    }
 }
 
 @media all and (min-width: 361px) and (max-width: 525px) {
@@ -157,6 +178,14 @@ h1 {
         /* ----------------------All pages*/
         display: none;
     }
+
+    .pokemon-list {
+        /* -----------------------Home page - Used to overwrite the previous columns display from Bootstrap (to go back to the single column Bootstrap feature, simply delete this command). This command display the Pokemon names buttons in 3 columns on the home page */
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto;
+        border-style: none;
+    }
 }
 
 @media all and (min-width: 200px) and (max-width: 360px) {
@@ -178,6 +207,14 @@ h1 {
     .page-header-image {
         /* ----------------------All pages*/
         display: none;
+    }
+
+    .pokemon-list {
+        /* -----------------------Home page - Used to overwrite the previous columns display from Bootstrap (to go back to the single column Bootstrap feature, simply delete this command). This command display the Pokemon names buttons in 3 columns on the home page */
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+        border-style: none;
     }
 }
 
