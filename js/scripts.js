@@ -32,13 +32,13 @@ let pokemonRepository = (function () {
         //let button = document.createElement('button'); created a buttons elements (or buttons tags) for each Pokemon
         let button = document.createElement('button');
         //button.classList.add('pokemon-button-class'); added a class the the buttons created upper to be able to style them in CSS within styles.css, and ('btn','btn-primary') classes are for Bootstrap.
-        button.classList.add('btn', 'btn-primary');
+        button.classList.add('btn', 'btn-danger', 'btn-lg');
         //Two lines below used to make sure the buttons created refer to the Boostrap model created (see function showModal(pokemon) below)
         button.setAttribute('data-toggle', 'modal');
         button.setAttribute('data-target', '#exampleModal');
         //button.innerText = pokemon.name; inserted the name of a pokemon inside each of the buttons created
         //In this command, pokemon is equal to the (pokemon) parameter following the function in the code upper (function addListItem(pokemon) {)
-        //In this command, .name is equal to the name object inside the IIFE upper (as in let pokemonList = [{ name: 'balbuzard', height: 7, types: ['grass', ' poison'] },
+        //.name is equal to the name object inside the IIFE upper (as in let pokemonList = [{ name: 'balbuzard', height: 7, types: ['grass', ' poison'] },
         button.innerText = pokemon.name;
         // button.addEventListener('click', function (event) created an event when a pokemon button is clicked on. This addEventListner code is associated to the function showDetails(pokemon) outisde the IIFE, and so return and take results from this outside function which shows each pokemon object inside the console.
         button.addEventListener('click', function (event) {
@@ -48,7 +48,7 @@ let pokemonRepository = (function () {
         listItem.appendChild(button);
         //pokemonList.append(listItem); attached each li (list items) to the ul (unordered list - the parent element)
         pokemonList.append(listItem);
-        button.addEventListener('click', function() { pokemonRepository.showDetails(pokemon) });
+        button.addEventListener('click', function () { pokemonRepository.showDetails(pokemon) });
     };
 
     //Function loadList used to get the complete list of Pokemon from here: https://pokeapi.co/api/v2/pokemon/?limit=150, precised in the 'let' apiURL at the beginning/top of this IIFE. 
@@ -85,6 +85,7 @@ let pokemonRepository = (function () {
         }).catch(function (e) {
             console.error(e);
         })
+
     }
 
     //Using showDetails() function to execute loadDetails() function in the IIFE upper. The showDetails() function is executed when a user clicks on a Pokémon. That’s the moment when Pokémon’s details are taken from the server acces to with the API. 
@@ -94,52 +95,6 @@ let pokemonRepository = (function () {
             showModal(pokemon); //used here to call and display the results from the showModal function below
         });
     }
-
-    // //Implementing modal manually
-    // function showModal(pokemon) {
-    //     let modalContainer = document.querySelector('#modal-container');
-    //     modalContainer.classList.add('is-visible');
-    //     //Clear all existing modal content
-    //     modalContainer.innerHTML = ''
-    //     //Create the actual modal window
-    //     let modal = document.createElement('div');
-    //     modal.classList.add('modal');
-    //     //Add the modal window element
-    //     let closeButtonElement = document.createElement('button');
-    //     closeButtonElement.classList.add('modal-close', 'btn','btn-primary');
-    //     closeButtonElement.innerHTML = 'Close';
-    //     //closeButtonElement.addEventListener('click', hideModal); is the an listener for closeButtonElement, and call the hideModal function below when clicked (and thus allows the modal window the close when user click on the 'close' button at the top right corner of the modal window).
-    //     closeButtonElement.addEventListener('click', hideModal);
-    //     //Add title to the modal windown
-    //     let titleElement = document.createElement('h1');
-    //     titleElement.innerHTML = pokemon.name;
-    //     //Add text to the modal windown
-    //     let contentElement = document.createElement('p');
-    //     contentElement.innerHTML = `Height: ${pokemon.height}m<br>`;
-    //     //Show image of each pokemon in modal window when a pokemon is clicked on
-    //     let imageElement = document.createElement ('img')
-    //     //Add class to images to use it in CSS to style them
-    //     imageElement.classList.add('pokemon-image');
-    //     //Get the URL for each pokemon image and show the image from that URL for each pokemon
-    //     imageElement.src = pokemon.imageUrl
-    //     imageElement.setAttribute('alt', 'Pokemon picture');
-
-    //     modal.appendChild(closeButtonElement);
-    //     modal.appendChild(titleElement);
-    //     modal.appendChild(contentElement);
-    //     modal.appendChild (imageElement);
-    //     modalContainer.appendChild(modal);
-
-    //     modalContainer.classList.add('is-visible');
-
-    //     modalContainer.addEventListener('click', (e) => {
-    //         //Make the modal window close when users click outside of it
-    //         let target = e.target;
-    //         if (target === modalContainer) {
-    //             hideModal();
-    //         }
-    //     });
-    // }
 
     //Implemanting code with Bootstrap
     function showModal(pokemon) {
@@ -154,10 +109,12 @@ let pokemonRepository = (function () {
         imageElementFront.attr('src', pokemon.imageUrlFront);
         let imageElementBack = $('<img class="modal-img" style="width:30%">');
         imageElementBack.attr('src', pokemon.imageUrlBack);
-        let heightElement = $('<p>' + 'height : ' + pokemon.height + 'm' + '</p>');
-        let weightElement = $('<p>' + 'weight : ' + pokemon.weight + 'kg' + '</p>');
-        let typesElement = $('<p>' + 'types : ' + pokemon.types + '</p>');
-        let abilitiesElement = $('<p>' + 'abilities : ' + pokemon.abilities + '</p>');
+        let heightElement = $('<h4>' + 'height : ' + pokemon.height + 'm' + '</h4>');
+        let weightElement = $('<h4>' + 'weight : ' + pokemon.weight + 'kg' + '</h4>');
+        let typesElement = $('<h4>' + 'types : ' + pokemon.types + '</h4>');
+        console.log(pokemon.types);
+        let abilitiesElement = $('<h4>' + 'abilities : ' + pokemon.abilities + '</h4>');
+        console.log(pokemon.abilities);
 
         modalTitle.append(nameElement);
         modalBody.append(imageElementFront);
@@ -167,23 +124,6 @@ let pokemonRepository = (function () {
         modalBody.append(typesElement);
         modalBody.append(abilitiesElement);
     }
-
-    //Old manual modal manually - make sure modal is closing according to different parameters
-    // document.querySelector('#show-modal').addEventListener('click', () => {
-    //     showModal('Modal title', 'This is the modal content!');
-    // });
-    // //function hideModal() { which is linked with closeButtonElement.addEventListener('click', hideModal) in the showModal function upper, allows users to close the modal windown if pressing on the 'close' button on the top right corner of the modal window
-    // function hideModal() {
-    //     let modalContainer = document.querySelector('#modal-container');
-    //     modalContainer.classList.remove('is-visible');
-    // }
-    // //window.addEventListener('keydown', (e) => { allow user to close the modal windown if pressing escape on keyboard
-    // window.addEventListener('keydown', (e) => {
-    //     let modalContainer = document.querySelector('#modal-container');
-    //     if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
-    //         hideModal();
-    //     }
-    // });
 
     return {
         getAll: getAll,
