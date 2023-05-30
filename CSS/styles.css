@@ -43,7 +43,7 @@ header {
 
 .page-logo {
     /* ----------------------All pages*/
-    font-size: 250%;
+    font-size: 220%;
     padding: 2%;
     margin: 0px;
     font-weight: 200;
@@ -52,27 +52,18 @@ header {
 #logo-second-part {
     /* ----------------------All pages*/
     font-weight: 900;
-    color: #fa4f24;
+    color: #fa2424;
 }
 
 .page-header-image {
     /* ----------------------All pages*/
     max-width: 95px;
+    margin-right: 15px;
 }
 
-
-.page-header__item {
+.navbar {
     /* ----------------------All pages*/
-    flex: 0 1 200px;
-    padding: 2%;
-    font-weight: var(--header-font-weight);
-    font-size: var(--header-font-size);
-}
-
-.page-header__item:last-child {
-    /* ----------------------All pages*/
-    flex-grow: 1;
-    text-align: right;
+    display: block;
 }
 
 body {
@@ -84,8 +75,9 @@ body {
 
 h1 {
     /* ----------------------All pages*/
-    font-size: 100px;
+    font-size: 90px;
     font-weight: 900;
+    margin: unset;
 }
 
 #home-page-title {
@@ -93,109 +85,105 @@ h1 {
     margin: 4%;
 }
 
-a:visited {
-    /* ----------------------All pages*/
-    /* color of the visited link */
-    color: var(--visited-anchor-color)
+.btn-lg {
+    /* -----------------------Home page - USed to overwrite the previous red color from Bootsrap (for the home page buttons appearing for each Pokemon) */
+    background-color: #fa2424;
 }
 
-a:hover,
-a:focus {
-    /* ----------------------All pages*/
-    /* No underlining and links change to blue when hovering over */
-    color: var(--hover-focus-anchor-color);
-    text-decoration: none;
-}
-
-a:active {
-    /* ----------------------All pages*/
-    /* color of the selected link */
-    color: var(--active-anchor-color);
-}
-
-@media all and (min-width: 350px) and (max-width: 500px) {
-
-    h1 {
-        /* ----------------------All pages*/
-        font-size: 40px;
-    }
-
-    .pokemon-button-class {
-        /* ----------------------Home page*/
-        width: 60%;
-        background-color: var(--primary-color);
-    }
-
-    .page-logo {
-        /* ----------------------All pages*/
-        padding: 2%;
-        margin: 0px;
-        font-weight: 200;
-        text-align: left;
-        margin: -110px 100px 0px 10px;
-        font-size: 26px;
-    }
-
-    .page-header-image {
-        /* ----------------------All pages*/
-        max-width: 95px;
-        margin-left: -230px;
-        margin-top: 40px;
-        margin-bottom: 10px;
-    }
-
-    .page-header__item:last-child {
-        /* ----------------------All pages*/
-        flex-grow: 1;
-        text-align: right;
-        font-size: 26px;
-    }
-
-    .navigation-list {
-        /* ----------------------All pages*/
-        list-style-type: none;
-        display: inline-grid;
-        margin: 0px;
-    }
+.modal-header {
+    /* -----------------------Home page - Used to overwrite the previous modal title display method from Bootsrap (to go back to Bootstrap feature, simply delete this command). This line in this CSS center the title of each Pokemon in the modal pop up. Also used for color and border styling below the Pokemon title div in the modal */
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: unset;
+    border-bottom: 2px solid #000000
 
 }
 
-@media all and (min-width: 501px) and (max-width: 750px) {
+.modal-content {
+    /* -----------------------Home page - USed to overwrite the previous modal title display method from Bootsrap (to go back to Bootstrap feature, simply delete this command). This line in this CSS center the title of each Pokemon in the modal pop up */
+    background-color: #f3eba1;
+}
+
+.btn-secondary {
+    /* -----------------------Home page - USed to overwrite the previous modal close button color from Bootsrap (to go back to Bootstrap feature, simply delete this command). This line in this CSS change to black the color of the close button in the modal pop up */
+    color: #fff;
+    background-color: #212529;
+}
+
+.list-group-item {
+    /* -----------------------Home page - USed to overwrite the previous modal close button color from Bootsrap (to go back to Bootstrap feature, simply delete this command). This line in this CSS change to black the color of the close button in the modal pop up */
+    color: #fff;
+}
+
+.modal-footer {
+    /* -----------------------Home page - Used to overwrite the previous modal footer top-border from Bootsrap (to go back to Bootstrap feature, simply delete this command). This line in this CSS remove the top-border line implemented by Boostrap */
+    border-top: none;
+
+}
+
+@media all and (min-width: 526px) and (max-width: 767px) {
 
     h1 {
         /* ----------------------All pages*/
         font-size: 60px;
     }
 
-    .pokemon-button-class {
-        /* ----------------------Home page*/
-        width: 50%;
-        background-color: var(--primary-color);
-    }
-
     .page-logo {
         /* ----------------------All pages*/
-        padding: 2%;
+        padding: 5%;
         margin: 0px;
         font-weight: 200;
         text-align: left;
-        margin: -100px 170px 10px 0px;
-        font-size: 38px;
+        font-size: 48px;
     }
 
     .page-header-image {
         /* ----------------------All pages*/
-        max-width: 95px;
-        margin-left: -320px;
-        margin-top: 40px;
-        margin-right: 90px;
+        display: none;
+    }
+}
+
+@media all and (min-width: 361px) and (max-width: 525px) {
+
+    h1 {
+        /* ----------------------All pages*/
+        font-size: 45px;
     }
 
-    .navigation-list {
+    .page-logo {
         /* ----------------------All pages*/
-        list-style-type: none;
-        display: inline-grid;
+        padding: 5%;
         margin: 0px;
+        font-weight: 200;
+        text-align: left;
+        font-size: 40px;
+    }
+
+    .page-header-image {
+        /* ----------------------All pages*/
+        display: none;
+    }
+}
+
+@media all and (min-width: 200px) and (max-width: 360px) {
+
+    h1 {
+        /* ----------------------All pages*/
+        font-size: 30px;
+    }
+
+    .page-logo {
+        /* ----------------------All pages*/
+        padding: 5%;
+        margin: 0px;
+        font-weight: 200;
+        text-align: left;
+        font-size: 28px;
+    }
+
+    .page-header-image {
+        /* ----------------------All pages*/
+        display: none;
     }
 }
 
