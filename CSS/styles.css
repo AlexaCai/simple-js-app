@@ -86,12 +86,12 @@ h1 {
 }
 
 .btn-lg {
-    /* -----------------------Home page - USed to overwrite the previous red color from Bootsrap (for the home page buttons appearing for each Pokemon) */
+    /* -----------------------Home page - Used to overwrite the previous red color from Bootstsap (for the home page buttons appearing for each Pokemon) */
     background-color: #fa2424;
 }
 
 .modal-header {
-    /* -----------------------Home page - Used to overwrite the previous modal title display method from Bootsrap (to go back to Bootstrap feature, simply delete this command). This line in this CSS center the title of each Pokemon in the modal pop up. Also used for color and border styling below the Pokemon title div in the modal */
+    /* -----------------------Home page - Used to overwrite the previous modal title display from Bootstrap (to go back to Bootstrap feature, simply delete this command). This command he is to center the title of each Pokemon in the modal when popping up. Also used for border styling below the Pokemon title in the modal */
     display: flex;
     flex-direction: column-reverse;
     align-items: unset;
@@ -100,25 +100,19 @@ h1 {
 }
 
 .modal-content {
-    /* -----------------------Home page - USed to overwrite the previous modal title display method from Bootsrap (to go back to Bootstrap feature, simply delete this command). This line in this CSS center the title of each Pokemon in the modal pop up */
+    /* -----------------------Home page - Used to overwrite the previous modal background display from Bootstrap (to go back to Bootstrap feature, simply delete this command). This command put the background of the modal pop up in yellow */
     background-color: #f3eba1;
 }
 
 .btn-secondary {
-    /* -----------------------Home page - USed to overwrite the previous modal close button color from Bootsrap (to go back to Bootstrap feature, simply delete this command). This line in this CSS change to black the color of the close button in the modal pop up */
+    /* -----------------------Home page - Used to overwrite the previous modal close-button color from Bootstrap (to go back to Bootstrap feature, simply delete this command). This command change to black the color of the close-button in the modal pop up */
     color: #fff;
     background-color: #212529;
 }
 
-.list-group-item {
-    /* -----------------------Home page - USed to overwrite the previous modal close button color from Bootsrap (to go back to Bootstrap feature, simply delete this command). This line in this CSS change to black the color of the close button in the modal pop up */
-    color: #fff;
-}
-
 .modal-footer {
-    /* -----------------------Home page - Used to overwrite the previous modal footer top-border from Bootsrap (to go back to Bootstrap feature, simply delete this command). This line in this CSS remove the top-border line implemented by Boostrap */
+    /* -----------------------Home page - Used to overwrite the previous modal footer top-border from Bootstrap (to go back to Bootstrap feature, simply delete this command). This command remove the top-border line initially implemented by Boosstrap */
     border-top: none;
-
 }
 
 @media all and (min-width: 526px) and (max-width: 767px) {
