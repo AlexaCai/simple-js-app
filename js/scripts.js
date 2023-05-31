@@ -111,17 +111,31 @@ let pokemonRepository = (function () {
         imageElementBack.attr('src', pokemon.imageUrlBack);
         let heightElement = $('<h4>' + 'height : ' + pokemon.height + 'm' + '</h4>');
         let weightElement = $('<h4>' + 'weight : ' + pokemon.weight + 'kg' + '</h4>');
-        let typesElement = $('<h4>' + 'types : ' + pokemon.types + '</h4>');
-        console.log(pokemon.types);
-        let abilitiesElement = $('<h4>' + 'abilities : ' + pokemon.abilities + '</h4>');
-        console.log(pokemon.abilities);
+
+        let typesElement = pokemon.types
+        for (let i = 0; i < typesElement.length; i++) {
+            console.log(typesElement[i].type.name);
+            console.log(typeof (typesElement[i].type.name));
+        }
+
+        // $('<h4>' + 'types : ' + pokemon.types + '</h4>');
+        // console.log(pokemon.types);
+
+        let abilitiesElement = pokemon.abilities
+        for (let i = 0; i < abilitiesElement.length; i++) {
+            console.log(abilitiesElement[i].ability.name);
+            console.log(typeof (abilitiesElement[i].ability.name))
+        }
+
+        // $('<h4>' + 'abilities : ' + pokemon.abilities[0].ability.name + '</h4>');
+        // console.log(pokemon.abilities[0].ability.name);
 
         modalTitle.append(nameElement);
         modalBody.append(imageElementFront);
         modalBody.append(imageElementBack);
         modalBody.append(heightElement);
         modalBody.append(weightElement);
-        modalBody.append(typesElement);
+        modalBody.append(test);
         modalBody.append(abilitiesElement);
     }
 
