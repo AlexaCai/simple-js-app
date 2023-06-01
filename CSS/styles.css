@@ -237,6 +237,10 @@ footer {
 margin-top: 20px;
 }
 
+#footer-image {
+    margin-bottom: 25px;
+}
+
 #contact-form {
     /* ----------------------Contact page*/
     display: block;
