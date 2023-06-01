@@ -62,7 +62,6 @@ let pokemonRepository = (function () {
                     detailsUrl: item.url
                 };
                 add(pokemon);
-                console.log(pokemon); 
             });
         }).catch(function (e) {
             console.error(e);
@@ -100,7 +99,6 @@ let pokemonRepository = (function () {
     //showDetails() function is use to execute loadDetails() function upper. The showDetails() function is executed when a user clicks on a pokemon. That’s the moment when a pokemon details are taken from the server via the API. See addListItem function, last line of code to have a look on the event listner trigerring that (button.addEventListener('click', function () { pokemonRepository.showDetails(pokemon) });).
     function showDetails(pokemon) {
         loadDetails(pokemon).then(function () {
-            console.log(pokemon);
             showModal(pokemon); //used here to call and display the results from the showModal function below
         });
     }
