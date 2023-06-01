@@ -1,4 +1,3 @@
-
 //IIFE making the variable pokemonList local to the function (rather than global if outside the IIFE).
 let pokemonRepository = (function () {
 
