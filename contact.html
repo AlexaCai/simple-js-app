@@ -4,9 +4,70 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <!-- Line below added to use Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="dist/styles.min.css">
+    <link rel="shortcut icon" href="img/pokeball.png" type="image/x-icon">
+    <title>Contact</title>
 </head>
 <body>
+    <header class="page-header">
+        <h1 class="page-logo">Poked-<span id="logo-second-part">Expert</span></h1>
+        <img src="img/pikachu.png" alt="pikachu" class="page-header-image">
+        <nav class="navbar navbar-expand-md navbar-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Pokedex<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1 class="contact page-title">Contact</h1>
+        <h4>
+            For any information, feel free to <a href="mailto:#">contact me by email</a> or by using directly the form below.
+        </h4>
+        <br>
+        <form action="#" method="post" id="contact-form">
+            <label class="standard-label" for="email">Email</label>
+            <input type="email" id="email" required>
+
+            <label class="standard-label" for="phone">Phone number</label>
+            <input type="tel" id="phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+
+            <label class="standard-label" for="message">Message</label>
+            <textarea id="message" cols="20" rows="5" maxlength="240" required></textarea>
+
+            <input type="submit" value="Send message" id="input-button">
+        </form>
+        <br>
+        <p>
+            Montreal<br>
+            Quebec<br>
+            Canada<br>
+        </p>
+        <p>
+            <!-- Phone number: <a href="tel:123-456-7890">123-456-7890</a><br> -->
+            <!-- Skype <a href="skype:live:#">ABC</a><br> -->
+            Email: <a href="mailto:alexandre.cailhier@hotmail.com">alexandre.cailhier@hotmail.com</a>
+        </p>
+        <img src="img/four-original-pokemon.png" alt="the four original pokemons" class="page-footer-image">
+    </main>
     
 </body>
 </html>
