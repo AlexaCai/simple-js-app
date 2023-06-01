@@ -4,6 +4,8 @@ This website present a list of the different pokemons, as well as presenting som
 
 When a user clicks on a pokemon's name, a dynamic window appears on the screen, displaying the pokemon's name, front and back image profiles, size, weight, type(s) and ability(ies).
 
+Link to the website online: https://alexacai.github.io/simple-js-app/
+
 **Technical information**
 
 The website is built using HTML, CSS and Javascript. The JS and CSS files inserted and linked in the main index.html file are minified versions of the original JS and CSS files.
