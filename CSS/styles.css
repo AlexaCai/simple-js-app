@@ -121,97 +121,6 @@ h1 {
     border-top: none;
 }
 
-@media all and (min-width: 526px) and (max-width: 767px) {
-
-    h1 {
-        /* All pages*/
-        font-size: 60px;
-    }
-
-    .page-logo {
-        /* All pages*/
-        padding: 5%;
-        margin: 0px;
-        font-weight: 200;
-        text-align: left;
-        font-size: 48px;
-    }
-
-    .page-header-image {
-        /* All pages*/
-        display: none;
-    }
-
-    .pokemon-list {
-        /* Home page - This command display the pokemon buttons in 3 columns on the home page */
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: auto;
-        border-style: none;
-    }
-}
-
-@media all and (min-width: 361px) and (max-width: 525px) {
-
-    h1 {
-        /* All pages*/
-        font-size: 45px;
-    }
-
-    .page-logo {
-        /* All pages*/
-        padding: 5%;
-        margin: 0px;
-        font-weight: 200;
-        text-align: left;
-        font-size: 40px;
-    }
-
-    .page-header-image {
-        /* All pages*/
-        display: none;
-    }
-
-    .pokemon-list {
-        /* Home page - This command display the pokemon buttons in 2 columns on the home page */
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        grid-template-rows: auto;
-        border-style: none;
-    }
-}
-
-@media all and (min-width: 200px) and (max-width: 360px) {
-
-    h1 {
-        /* All pages*/
-        font-size: 30px;
-    }
-
-    .page-logo {
-        /* All pages*/
-        padding: 5%;
-        margin: 0px;
-        font-weight: 200;
-        text-align: left;
-        font-size: 28px;
-    }
-
-    .page-header-image {
-        /* All pages*/
-        display: none;
-    }
-
-    .pokemon-list {
-        /* Home page - This command display the pokemon buttons in 1 column on the home page */
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-        grid-template-rows: auto;
-        border-style: none;
-    }
-}
-
-
 footer {
     /* All pages*/
     background-color: var(--primary-color);
@@ -237,8 +146,13 @@ footer {
 margin-top: 20px;
 }
 
+#contact-page-text {
+    margin: 4%;
+}
+
 #footer-image {
     margin-bottom: 25px;
+    max-width: 300px;
 }
 
 #contact-form {
@@ -283,6 +197,138 @@ margin-top: 20px;
 #input-button {
     margin: auto;
     display: block;
-    width: 20%;
     margin-bottom: 20px;
+}
+
+@media all and (min-width: 526px) and (max-width: 767px) {
+
+    h1 {
+        /* All pages*/
+        font-size: 60px;
+    }
+
+    .page-logo {
+        /* All pages*/
+        padding: 5%;
+        margin: 0px;
+        font-weight: 200;
+        text-align: left;
+        font-size: 48px;
+    }
+
+    .page-header-image {
+        /* All pages*/
+        display: none;
+    }
+
+    .pokemon-list {
+        /* Home page - This command display the pokemon buttons in 3 columns on the home page */
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: auto;
+        border-style: none;
+    }
+
+    #contact-form {
+        display: block;
+        margin: 30px;
+        padding: 10px;
+    }
+
+    #footer-image {
+        margin-bottom: 25px;
+        max-width: 230px;
+    }
+}
+
+@media all and (min-width: 361px) and (max-width: 525px) {
+
+    h1 {
+        /* All pages*/
+        font-size: 45px;
+    }
+
+    .page-logo {
+        /* All pages*/
+        padding: 5%;
+        margin: 0px;
+        font-weight: 200;
+        text-align: left;
+        font-size: 40px;
+    }
+
+    .page-header-image {
+        /* All pages*/
+        display: none;
+    }
+
+    .pokemon-list {
+        /* Home page - This command display the pokemon buttons in 2 columns on the home page */
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto;
+        border-style: none;
+    }
+
+    #contact-form {
+        display: block;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    #footer-image {
+        margin-bottom: 25px;
+        max-width: 150px;
+    }
+
+    #email, #phone {
+        display: block;
+        width: auto;
+    }
+}
+
+@media all and (min-width: 200px) and (max-width: 360px) {
+
+    h1 {
+        /* All pages*/
+        font-size: 30px;
+    }
+
+    .page-logo {
+        /* All pages*/
+        padding: 5%;
+        margin: 0px;
+        font-weight: 200;
+        text-align: left;
+        font-size: 28px;
+    }
+
+    .page-header-image {
+        /* All pages*/
+        display: none;
+    }
+
+    .pokemon-list {
+        /* Home page - This command display the pokemon buttons in 1 column on the home page */
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+        border-style: none;
+    }
+
+    #contact-form {
+        display: block;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    #footer-image {
+        margin-bottom: 25px;
+        max-width: 150px;
+    }
+
+    #email, #phone {
+        display: block;
+        width: auto;
+    }
 }
