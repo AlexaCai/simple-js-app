@@ -1,12 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <!-- Line below added to use Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="dist/styles.min.css">
+    <link rel="shortcut icon" href="img/pokeball.png" type="image/x-icon">
+    <title>Pokedex</title>
 </head>
+
 <body>
-    
+    <header class="page-header">
+        <h1 class="page-logo">Poked-<span id="logo-second-part">Expert</span></h1>
+        <img src="img/pikachu.png" alt="pikachu" class="page-header-image">
+        <nav class="navbar navbar-expand-md navbar-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Pokedex<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1 class="contact page-title" id="topsection">Contact</h1>
+        <h5 id="contact-page-text">
+            For any information, feel free to <a href="mailto:#">contact me by email</a> or by using directly the form
+            below.
+        </h5>
+        <br>
+        <form action="#" method="post" id="contact-form">
+            <label class="standard-label" for="email">Email</label>
+            <input type="email" id="email" required>
+
+            <label class="standard-label" for="phone">Phone number</label>
+            <input type="tel" id="phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+
+            <label class="standard-label" for="message">Message</label>
+            <textarea id="message" cols="20" rows="5" maxlength="240" required></textarea>
+
+            <input type="submit" value="Send message" id="input-button">
+        </form>
+        <br>
+        <p>
+            Montreal<br>
+            Quebec<br>
+            Canada<br>
+        </p>
+        <p>
+            <!-- Phone number: <a href="tel:123-456-7890">123-456-7890</a><br> -->
+            <!-- Skype <a href="skype:live:#">ABC</a><br> -->
+            Email: <a href="mailto:alexandre.cailhier@hotmail.com">alexandre.cailhier@hotmail.com</a>
+        </p>
+        <img src="img/four-original-pokemon.png" alt="the four original pokemons" id="footer-image">
+    </main>
+    <footer class="page-footer">
+        <p id="footer-title">Find me on</p>
+        <div class="social-media">
+            <a href="https://www.linkedin.com/in/alecai/"> <img src="img/linkedin-logo.svg" alt="linkedin logo"></a>
+            <a href="https://github.com/AlexaCai"> <img src="img/github-logo.svg" alt="github logo"></a>
+        </div>
+        <br>
+        <a href="#topsection">Back to top</a>
+    </footer>
+    <!-- Line below added to use jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!-- Line below added to use Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <!-- Line below added to use Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- Two Polyfills added to provide modern functionality on older browsers that do not natively support it -->
+    <script src="js/promise-polyfill.js"></script>
+    <script src="js/fetch-polyfill.js"></script>
+    <!-- Link to the js file used to make the webpage works -->
+    <script src="dist/scripts.min.js"></script>
 </body>
+
 </html>
