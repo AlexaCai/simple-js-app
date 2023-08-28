@@ -1,15 +1,30 @@
-**Project definition**
+# Pokedex web app documentation
 
-This website present a list of the different pokemons, as well as presenting some of the characteristics associated with each pokemon when a user clicks on a pokemon's name. 
+**Content**
 
-When a user clicks on a pokemon's name, a dynamic window appears on the screen, displaying the pokemon's name, front and back image profiles, size, weight, type(s) and ability(ies).
+- Projet description
+- Technical aspects
+ 
+## Projet description
 
-**Technical information**
+The Pokedex web app has been created to serve as an information resource to any aspiring Pokemon Masters. Users can open the Pokedex and see a list of Pokemons displayed. They can then click on any Pokemon to make a modal popping up and show more information on the selected Pokemon. 
 
-The website is built using HTML, CSS and Javascript. The JS and CSS files inserted and linked in the main index.html file are minified versions of the original JS and CSS files.
+The objective of this project was to build a small web application with HTML, CSS, JavaScript and jQuery that loads data from an external API (using AJAX) to enable the viewing of data points in detail and based on user interaction, as well as using some Bootstrap functionalities for the UIs.
 
-Bootstrap is also used for visual effects. Since Bootstrap's JavaScript is built using jQuery code, the website also uses some jQuery elements.
+The Pokedex development can be breakdown in the five following points:
 
-Finally, regarding the API, all information shown on the website for each pokemon come from this URL: https://pokeapi.co/. For a closer view on the informations taken from that API to build the website, see this URL: https://pokeapi.co/api/v2/pokemon/?limit=150.
+ - **Who** — For any Pokemon fans.
+ - **What** — A web app built with HTML, CSS, JavaScript, jQuery and Bootstrap, which loads data from an external API (using AJAX) and dynamically update the webpage content with the retrieved Pokemon information.
+ - **When** — Whenever users of the Pokedex are interacting with the web app.
+ - **Where** — The Pokedex is hosted on Github Pages (gh-pages) and the code is accessible on the Github repository of this project. 
+ - **Why** — To provides a simple, easy-to-use and visually appealing web app for anyone who wishes to learn more about the Pokemons.
+
+
+## Technical aspects
+
+
+The Pokedex web app is built with HTML, CSS, JavaScript, jQuery and Bootstrap, and is fed by an external API named [PokeAPI](https://pokeapi.co/). PokeAPI is a RESTful API linked to a database detailing everything about the Pokemons. The API documentation can be found [here](https://pokeapi.co/docs/v2).
+
+The Pokedex is hosted on Github Pages (gh-pages) and the code is accessible on the Github repository of this project. 
 
 
