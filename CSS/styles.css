@@ -79,25 +79,25 @@ h1 {
 }
 
 .pokemon-list {
-    /* Home page - Used to overwrite the previous columns display from Bootstrap (to go back to the single column Bootstrap feature, simply delete this command). This command display the pokemon names buttons in 3 columns on the home page */
+    /* Home page*/
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     border-style: none;
 }
 
 .list-group-item {
-    /* Home page - Used to overwrite the previous home page button borders display from Bootstrap (to go back to the single column Bootstrap feature, simply delete this command). This command display the pokemon names buttons without any border around on the home page */
+    /* Home page*/
     border: none;
 }
 
 .btn-block {
-    /* Home page - Used to overwrite the previous red color from Bootstsap for the buttons on the home page for each pokemon */
+    /* Home page*/
     background-color: #fa2424;
 }
 
 .modal-header {
-    /* Home page - Used to overwrite the previous modal title display from Bootstrap (to go back to Bootstrap feature, simply delete this command). This command is used to center the title of each pokemon in the modal when popping up. Also used for border styling below the pokemon name in the modal */
+    /* Home page*/
     display: flex;
     flex-direction: column-reverse;
     align-items: unset;
@@ -106,18 +106,18 @@ h1 {
 }
 
 .modal-content {
-    /* Home page - Used to overwrite the previous modal background display from Bootstrap (to go back to Bootstrap feature, simply delete this command). This command put the background of the modal in yellow */
+    /* Home page*/
     background-color: #f3eba1;
 }
 
 .btn-secondary {
-    /* Home page - Used to overwrite the previous modal close-button color from Bootstrap (to go back to Bootstrap feature, simply delete this command). This command changes to black the color of the close-button in the modal pop up */
+    /* Home page*/
     color: #fff;
     background-color: #212529;
 }
 
 .modal-footer {
-    /* Home page - Used to overwrite the previous modal footer top-border from Bootstrap (to go back to Bootstrap feature, simply delete this command). This command remove the top-border line initially implemented by Boosstrap in the footer section of the modal */
+    /* Home page*/
     border-top: none;
 }
 
@@ -143,61 +143,18 @@ footer {
 
 #footer-title {
     /* All pages*/
-margin-top: 20px;
-}
-
-#contact-page-text {
-    margin: 4%;
+    margin-top: 20px;
 }
 
 #footer-image {
+    /* All pages*/
     margin-bottom: 25px;
     max-width: 300px;
 }
 
-#contact-form {
-    /* ----------------------Contact page*/
-    display: block;
-    margin: 0px 150px 0px 150px;
-    padding: 10px;
-}
-
-.standard-label {
-    /* ----------------------Contact page*/
-    display: block;
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-#email {
-    /* ----------------------Contact page*/
-    margin: auto;
-    display: block;
-    width: 35%;
-    margin-bottom: 20px;
-}
-
-#phone {
-    /* ----------------------Contact page*/
-    margin: auto;
-    display: block;
-    width: 35%;
-    margin-bottom: 20px;
-}
-
-#message {
-    /* ----------------------Contact page*/
-    margin: auto;
-    display: block;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-#input-button {
-    margin: auto;
-    display: block;
-    margin-bottom: 20px;
+#contact-page-text {
+    /* Contact page*/
+    margin: 4%;
 }
 
 @media all and (min-width: 526px) and (max-width: 767px) {
@@ -222,20 +179,15 @@ margin-top: 20px;
     }
 
     .pokemon-list {
-        /* Home page - This command display the pokemon buttons in 3 columns on the home page */
+        /* Home page*/
         display: grid;
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
         border-style: none;
     }
 
-    #contact-form {
-        display: block;
-        margin: 30px;
-        padding: 10px;
-    }
-
     #footer-image {
+        /* All pages*/
         margin-bottom: 25px;
         max-width: 230px;
     }
@@ -263,27 +215,17 @@ margin-top: 20px;
     }
 
     .pokemon-list {
-        /* Home page - This command display the pokemon buttons in 2 columns on the home page */
+        /* Home page*/
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
         border-style: none;
     }
 
-    #contact-form {
-        display: block;
-        margin: 10px;
-        padding: 10px;
-    }
-
     #footer-image {
+        /* All pages*/
         margin-bottom: 25px;
         max-width: 150px;
-    }
-
-    #email, #phone {
-        display: block;
-        width: auto;
     }
 }
 
@@ -309,26 +251,16 @@ margin-top: 20px;
     }
 
     .pokemon-list {
-        /* Home page - This command display the pokemon buttons in 1 column on the home page */
+        /* Home page*/
         display: grid;
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(1, 1fr);
         grid-template-rows: auto;
         border-style: none;
     }
 
-    #contact-form {
-        display: block;
-        margin: 10px;
-        padding: 10px;
-    }
-
     #footer-image {
+        /* All pages*/
         margin-bottom: 25px;
         max-width: 150px;
-    }
-
-    #email, #phone {
-        display: block;
-        width: auto;
     }
 }
