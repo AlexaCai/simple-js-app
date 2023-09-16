@@ -11,7 +11,6 @@
 }
 
 header {
-    /* All pages*/
     background-color: var(--primary-color);
     font-family: var(--font-family);
     font-weight: var(--header-font-weight);
@@ -27,7 +26,6 @@ header {
 }
 
 .page-header {
-    /* All pages*/
     display: flex;
     width: 100%;
     align-items: center;
@@ -35,7 +33,6 @@ header {
 }
 
 .page-logo {
-    /* All pages*/
     font-size: 220%;
     padding: 2%;
     margin: 0px;
@@ -43,43 +40,36 @@ header {
 }
 
 #logo-second-part {
-    /* All pages*/
     font-weight: 900;
     color: #fa2424;
 }
 
 .page-header-image {
-    /* All pages*/
     max-width: 95px;
     margin-right: 60px;
 }
 
 .navbar {
-    /* All pages*/
     display: block;
 }
 
 body {
-    /* All pages*/
     font-family: 'Indie Flower', sans-serif;
     font-weight: 400;
     text-align: center;
 }
 
 h1 {
-    /* All pages*/
     font-size: 90px;
     font-weight: 900;
     margin: unset;
 }
 
 .page-title {
-    /* Home page*/
     margin: 4%;
 }
 
 .pokemon-list {
-    /* Home page*/
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
@@ -87,17 +77,14 @@ h1 {
 }
 
 .list-group-item {
-    /* Home page*/
     border: none;
 }
 
 .btn-block {
-    /* Home page*/
     background-color: #fa2424;
 }
 
 .modal-header {
-    /* Home page*/
     display: flex;
     flex-direction: column-reverse;
     align-items: unset;
@@ -106,23 +93,19 @@ h1 {
 }
 
 .modal-content {
-    /* Home page*/
     background-color: #f3eba1;
 }
 
 .btn-secondary {
-    /* Home page*/
     color: #fff;
     background-color: #212529;
 }
 
 .modal-footer {
-    /* Home page*/
     border-top: none;
 }
 
 footer {
-    /* All pages*/
     background-color: var(--primary-color);
     font-family: var(--font-family);
     font-weight: var(--body-font-weight);
@@ -134,7 +117,6 @@ footer {
 }
 
 .page-footer {
-    /* All pages*/
     clear: both;
     display: flex;
     flex-direction: column;
@@ -142,30 +124,25 @@ footer {
 }
 
 #footer-title {
-    /* All pages*/
     margin-top: 20px;
 }
 
 #footer-image {
-    /* All pages*/
     margin-bottom: 25px;
     max-width: 300px;
 }
 
 #contact-page-text {
-    /* Contact page*/
     margin: 4%;
 }
 
 @media all and (min-width: 526px) and (max-width: 767px) {
 
     h1 {
-        /* All pages*/
         font-size: 60px;
     }
 
     .page-logo {
-        /* All pages*/
         padding: 5%;
         margin: 0px;
         font-weight: 200;
@@ -174,12 +151,10 @@ footer {
     }
 
     .page-header-image {
-        /* All pages*/
         display: none;
     }
 
     .pokemon-list {
-        /* Home page*/
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
@@ -187,7 +162,6 @@ footer {
     }
 
     #footer-image {
-        /* All pages*/
         margin-bottom: 25px;
         max-width: 230px;
     }
@@ -196,12 +170,10 @@ footer {
 @media all and (min-width: 361px) and (max-width: 525px) {
 
     h1 {
-        /* All pages*/
         font-size: 45px;
     }
 
     .page-logo {
-        /* All pages*/
         padding: 5%;
         margin: 0px;
         font-weight: 200;
@@ -210,12 +182,10 @@ footer {
     }
 
     .page-header-image {
-        /* All pages*/
         display: none;
     }
 
     .pokemon-list {
-        /* Home page*/
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
@@ -223,7 +193,6 @@ footer {
     }
 
     #footer-image {
-        /* All pages*/
         margin-bottom: 25px;
         max-width: 150px;
     }
@@ -232,12 +201,10 @@ footer {
 @media all and (min-width: 200px) and (max-width: 360px) {
 
     h1 {
-        /* All pages*/
         font-size: 30px;
     }
 
     .page-logo {
-        /* All pages*/
         padding: 5%;
         margin: 0px;
         font-weight: 200;
@@ -246,12 +213,10 @@ footer {
     }
 
     .page-header-image {
-        /* All pages*/
         display: none;
     }
 
     .pokemon-list {
-        /* Home page*/
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: auto;
@@ -259,7 +224,6 @@ footer {
     }
 
     #footer-image {
-        /* All pages*/
         margin-bottom: 25px;
         max-width: 150px;
     }
